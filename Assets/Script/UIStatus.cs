@@ -9,5 +9,29 @@ public class UIStatus : MonoBehaviour
     public Text defenseText;
     public Text healthText;
     public Text criticalText;
-    public Button backBytton;
+    public Button backButton;
+
+    private void Start()
+    {
+        backButton.onClick.AddListener(BackToMainMenu);
+        SetSatusText(GameManager.Instance.Player);
+    }
+
+    private void OnDestroy()
+    {
+        backButton.onClick.RemoveListener(BackToMainMenu);
+    }
+
+    public void BackToMainMenu()
+    {
+        UIManager.Instance.OpenMainMenuUI();
+    }
+
+    public void SetSatusText(CharacterData data)
+    {
+        attackText.text = $"공격력\n{data.Attack.ToString()}";
+        defenseText.text = $"방어력\n{data.Defense.ToString()}";
+        healthText.text = $"체력\n{data.Health.ToString()}";
+        criticalText.text = $"치명타\n{data.Critical.ToString()}";
+    }
 }
