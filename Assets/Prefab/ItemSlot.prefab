@@ -135,8 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2327d38f2ff16484487ebd9029627e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  outline: {fileID: 0}
+  button: {fileID: 5790720287438335329}
+  equipImage: {fileID: 6298968634555123773}
 --- !u!1 &6872049426331905359
 GameObject:
   m_ObjectHideFlags: 0
