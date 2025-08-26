@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class UIManager : MonoBehaviour      //UI매니저 입니다.
 {
     [SerializeField] private UIMainMenu mainMenu;
     [SerializeField] private UIInventory inventory;
@@ -32,7 +32,7 @@ public class UIManager : MonoBehaviour
         OpenMainMenuUI();
     }
 
-    public void OpenMainMenuUI()
+    public void OpenMainMenuUI()    //UI들을 직접 켰다꺼주며 관리해 줍니다. 매니저에서 만든 메서드를 UI들이 사용하는게 더 좋을 것 같았습니다.
     {
         Inventory.gameObject.SetActive(false);
         Status.gameObject.SetActive(false);

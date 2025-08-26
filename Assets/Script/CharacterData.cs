@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CharacterData
+public class CharacterData      //캐릭터(정보) 를 관리 하는 클래스 입니다.
 {
     public int Attack { get; private set; }
     public int Defense { get; private set; }
@@ -25,12 +25,12 @@ public class CharacterData
         Inventory = inventory;
     }
 
-    public void AddItem(ItemData item)
+    public void AddItem(ItemData item)  //인벤토리에 아이템을 넣어주는 메서드 입니다.
     {
         Inventory.Add(item);
     }
 
-    public void Equip(ItemData item)
+    public void Equip(ItemData item)    //현재는 스위치 이지만 enum이 아니라 구조체를 이용하면 swich문을 사용하지 않아도 될 것 같습니다
     {
         switch (item.Type)
         {
@@ -53,7 +53,7 @@ public class CharacterData
         }
     }
 
-    public void UnEquip(ItemData item)
+    public void UnEquip(ItemData item)  //해제 해주는 메서드 입니다.
     {
         switch (item.Type)
         {

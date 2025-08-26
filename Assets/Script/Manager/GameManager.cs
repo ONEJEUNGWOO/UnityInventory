@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour    //게임매니저입니다.
 {
     public static GameManager Instance;
 
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         SetData();
     }
 
-    public void SetData()
+    public void SetData()   //데이터를 초기화 해주는 메서드 입니다. 유니티 내에서 생성자로 생성하는게 익숙 하지 않아 조금 어려웠습니다.
     {
         AttackItem = new ItemData(ItemType.Attack, 10, false);
         DefenseItem = new ItemData(ItemType.Defense, 10, false);
